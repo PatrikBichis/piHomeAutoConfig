@@ -1,17 +1,12 @@
-function piHomeAutoConfig () {
-	if (arguments.callee._singletonInstance){
- 		return arguments.callee._singletonInstance;
-	}
- 	arguments.callee._singletonInstance = this;
+function tellstick(){
+	var self = this;
 
- 	this.tellstickConfig = new Object();
-
-	this.tellstickConfig.user = "nobody";
-	this.tellstickConfig.group = "plugdev";
-	this.tellstickConfig.ignoreControllerConfirmation = "false";
+	self.user = "nobody";
+	self.group = "plugdev";
+	self.ignoreControllerConfirmation = "false";
 
 
-	this.tellstickConfig.units = [
+	self.units = [
 		{	
 			id : 1,
 			name : "F"+unescape("%F6")+"nsterlampa i kontoret",
@@ -63,6 +58,15 @@ function piHomeAutoConfig () {
 			currentValue : false
 		}
 	];
+}
+
+function piHomeAutoConfig () {
+	if (arguments.callee._singletonInstance){
+ 		return arguments.callee._singletonInstance;
+	}
+ 	arguments.callee._singletonInstance = this;
+
+ 	this.tellstickConfig = new tellstick();
  }
  
 piHomeAutoConfig();
