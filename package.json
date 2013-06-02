@@ -1,13 +1,16 @@
 {
   "name": "piHomeAutoConfig",
-  "homepage": "https://plus.google.com/u/0/communities/100516743030464969029",
+  "homepage": "https://github.com/x-firm/piHomeAutoConfig",
   "author": {
     "name": "Patrik Olsson",
-    "url": ""
+    "url": "http://www.x-firm.com"
   },
   "description": "Config file for piHomeAuto project",
   "version": "0.0.1",
-  "preferGlobal": "false",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/x-firm/piHomeAutoConfig.git"
+  },
   "main": "piHomeAutoConfig",
   "licenses": [
     {
