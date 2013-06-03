@@ -60,6 +60,18 @@ function tellstick(){
 	];
 }
 
+function router(){
+	var self = this;
+
+	self.user = "user";
+	self.password = "password";
+
+	self.ip = "192.168.0.1";
+
+	self.brand = "Netgear";
+	self.type = "";
+}
+
 function piHomeAutoConfig () {
 	if (arguments.callee._singletonInstance){
  		return arguments.callee._singletonInstance;
@@ -67,6 +79,7 @@ function piHomeAutoConfig () {
  	arguments.callee._singletonInstance = this;
 
  	this.tellstickConfig = new tellstick();
+ 	this.routerConfig = new router();
  }
  
 piHomeAutoConfig();
