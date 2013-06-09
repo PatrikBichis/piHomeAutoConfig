@@ -60,6 +60,45 @@ function tellstick(){
 	];
 }
 
+function controll(){
+	var self = this;
+
+	this.groups = [
+		{ 
+			id : 1,
+			name : "Alla",
+			units : [
+				{
+					id: 1,
+					type: "tellstick"
+				},{
+					id: 2,
+					type: "tellstick"
+				},{
+					id: 3,
+					type: "tellstick"
+				},{
+					id: 4,
+					type: "tellstick"
+				},{
+					id: 5,
+					type: "tellstick"
+				},{
+					id: 6,
+					type: "tellstick"
+				},{
+					id: 7,
+					type: "tellstick"
+				}
+			],
+			onAction : 0,
+			offAction : 0
+		}
+	];
+
+	this.actions = [];
+}
+
 function router(){
 	var self = this;
 
@@ -80,6 +119,7 @@ function piHomeAutoConfig () {
 
  	this.tellstickConfig = new tellstick();
  	this.routerConfig = new router();
+ 	this.controll = new controll();
  }
  
 piHomeAutoConfig();
