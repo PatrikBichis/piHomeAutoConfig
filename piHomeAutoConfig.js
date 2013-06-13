@@ -106,6 +106,8 @@ function router(){
 	self.password = "password";
 
 	self.ip = "192.168.0.1";
+	
+	self.network = "192.168.1.0/24"
 
 	self.brand = "Netgear";
 	self.type = "";
