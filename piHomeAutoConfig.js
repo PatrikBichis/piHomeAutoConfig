@@ -93,6 +93,37 @@ function controll(){
 			],
 			onAction : 0,
 			offAction : 0
+		},{ 
+			id : 2,
+			name : "Fönster lampor",
+			units : [
+				{
+					id: 1,
+					type: "tellstick"
+				},{
+					id: 3,
+					type: "tellstick"
+				},{
+					id: 5,
+					type: "tellstick"
+				},{
+					id: 7,
+					type: "tellstick"
+				}
+			],
+			onAction : 0,
+			offAction : 0
+		},{ 
+			id : 2,
+			name : "Ute belysning",
+			units : [
+				{
+					id: 4,
+					type: "tellstick"
+				}
+			],
+			onAction : 0,
+			offAction : 0
 		}
 	];
 
