@@ -154,7 +154,11 @@ function controll(){
 				useUnit : false,
 				unit : [],
 				useTime : false,
-				time : "00:20:00",
+				time : {
+					hours : 00,
+					minutes : 00,
+					seconds : 00
+				},
 				sunUp: false,
 				sunDown: false
 			},
@@ -162,7 +166,11 @@ function controll(){
 				useUnit : false,
 				unit : [],
 				useTime : false,
-				time : "00:20:00",
+				time : {
+					hours : 00,
+					minutes : 00,
+					seconds : 00
+				},
 				sunUp: false,
 				sunDown: false
 			}
@@ -174,7 +182,11 @@ function controll(){
 				useUnit : false,
 				unit : [],
 				useTime : false,
-				time : "00:20:00",
+				time : {
+					hours : 00,
+					minutes : 00,
+					seconds : 00
+				},
 				sunUp: false,
 				sunDown: false
 			},
@@ -182,7 +194,11 @@ function controll(){
 				useUnit : false,
 				unit : [],
 				useTime : false,
-				time : "00:20:00",
+				time : {
+					hours : 00,
+					minutes : 00,
+					seconds : 00
+				},
 				sunUp: false,
 				sunDown: false
 			}
@@ -194,7 +210,11 @@ function controll(){
 				useUnit : false,
 				unit : [],
 				useTime : false,
-				time : "00:00:00",
+				time : {
+					hours : 00,
+					minutes : 00,
+					seconds : 00
+				},
 				sunUp: false,
 				sunDown: false
 			},
@@ -202,7 +222,11 @@ function controll(){
 				useUnit : false,
 				unit : [],
 				useTime : false,
-				time : "00:00:00",
+				time : {
+					hours : 00,
+					minutes : 00,
+					seconds : 00
+				},
 				sunUp: false,
 				sunDown: false
 			}
@@ -282,6 +306,21 @@ function router(){
 	self.type = "";
 }*/
 
+function homeInfo(){
+	var self = this;
+
+	self.Country = "Sweden";
+
+	self.Latitude = "59.252498";
+	self.Longitude = "15.173221";
+}
+
+function eventEngine(){
+	var self = this;
+
+	self.pollRate = 5000; //ms
+}
+
 function piHomeAutoConfig () {
 	if (arguments.callee._singletonInstance){
  		return arguments.callee._singletonInstance;
@@ -290,6 +329,8 @@ function piHomeAutoConfig () {
 
  	this.tellstickConfig = new tellstick();
  	//this.routerConfig = new router();
+ 	this.eventEngine = new eventEngine();
+ 	this.homeInfo = new homeInfo();
  	this.controll = new controll();
  	this.sonos = new sonos();
  }
