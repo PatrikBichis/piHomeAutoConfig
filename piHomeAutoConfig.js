@@ -82,7 +82,7 @@ function controll(){
 			id : 1,
 			type : 1,
 			unitId : 1,
-			name : "F"+unescape("%F6")+"nsterlampa i kontoret",
+			name : "F"+unescape("%F6")+"nsterlampor i vardagsrummet",
 			currentValue : false,
 			dimmer : false,
 			currentDimValue : 255
@@ -98,7 +98,7 @@ function controll(){
 			id : 3,
 			type : 1,
 			unitId : 3,
-			name : "F"+unescape("%F6")+"nsterlampor i vardagsrummet",
+			name : "F"+unescape("%F6")+"nsterlampor i vardagsrummet (Burspr"+unescape("%E5")+"k)",
 			currentValue : false,
 			dimmer : false,
 			currentDimValue : 255
@@ -150,20 +150,62 @@ function controll(){
 			id : 1,
 			name : "Alla",
 			units : [1, 2, 3, 4, 5, 6, 7, 8],
-			onAction : 0,
-			offAction : 0
+			onAction : {
+				useUnit : false,
+				unit : [],
+				useTime : false,
+				time : "00:20:00",
+				sunUp: false,
+				sunDown: false
+			},
+			offAction : {
+				useUnit : false,
+				unit : [],
+				useTime : false,
+				time : "00:20:00",
+				sunUp: false,
+				sunDown: false
+			}
 		},{ 
 			id : 2,
-			name : "Fönster lampor",
-			units : [1, 3, 5, 7],
-			onAction : 0,
-			offAction : 0
+			name : "Fönster lampor (Nere)",
+			units : [1, 3, 5],
+			onAction : {
+				useUnit : false,
+				unit : [],
+				useTime : false,
+				time : "00:20:00",
+				sunUp: false,
+				sunDown: false
+			},
+			offAction : {
+				useUnit : false,
+				unit : [],
+				useTime : false,
+				time : "00:20:00",
+				sunUp: false,
+				sunDown: false
+			}
 		},{ 
 			id : 2,
 			name : "Ute belysning",
 			units : [4 ],
-			onAction : 0,
-			offAction : 0
+			onAction : {
+				useUnit : false,
+				unit : [],
+				useTime : false,
+				time : "00:00:00",
+				sunUp: false,
+				sunDown: false
+			},
+			offAction : {
+				useUnit : false,
+				unit : [],
+				useTime : false,
+				time : "00:00:00",
+				sunUp: false,
+				sunDown: false
+			}
 		}
 	];
 
@@ -225,21 +267,20 @@ function sonos(){
 	];
 }
 
+/*
 function router(){
 	var self = this;
 
-	self.user = "user";
-	self.password = "password";
+	self.user = "admin";
+	self.password = "pambo0409";
 
 	self.ip = "192.168.0.1";
-	
-	self.network = "192.168.1.0/24"
 
 	self.network = "192.168.0.1/24";
 
 	self.brand = "Netgear";
 	self.type = "";
-}
+}*/
 
 function piHomeAutoConfig () {
 	if (arguments.callee._singletonInstance){
@@ -248,7 +289,7 @@ function piHomeAutoConfig () {
  	arguments.callee._singletonInstance = this;
 
  	this.tellstickConfig = new tellstick();
- 	this.routerConfig = new router();
+ 	//this.routerConfig = new router();
  	this.controll = new controll();
  	this.sonos = new sonos();
  }
