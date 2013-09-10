@@ -154,11 +154,7 @@ function controll(){
 				useUnit : false,
 				unit : [],
 				useTime : false,
-				time : {
-					hours : 00,
-					minutes : 00,
-					seconds : 00
-				},
+				time :[],
 				sunUp: false,
 				sunDown: false
 			},
@@ -166,11 +162,7 @@ function controll(){
 				useUnit : false,
 				unit : [],
 				useTime : false,
-				time : {
-					hours : 00,
-					minutes : 00,
-					seconds : 00
-				},
+				time : [],
 				sunUp: false,
 				sunDown: false
 			}
@@ -182,11 +174,7 @@ function controll(){
 				useUnit : false,
 				unit : [],
 				useTime : false,
-				time : {
-					hours : 00,
-					minutes : 00,
-					seconds : 00
-				},
+				time : [],
 				sunUp: false,
 				sunDown: false
 			},
@@ -194,11 +182,7 @@ function controll(){
 				useUnit : false,
 				unit : [],
 				useTime : false,
-				time : {
-					hours : 00,
-					minutes : 00,
-					seconds : 00
-				},
+				time : [],
 				sunUp: false,
 				sunDown: false
 			}
@@ -209,24 +193,24 @@ function controll(){
 			onAction : {
 				useUnit : false,
 				unit : [],
-				useTime : false,
-				time : {
-					hours : 00,
-					minutes : 00,
+				useTime : true,
+				time : [{
+					hours : 05,
+					minutes : 30,
 					seconds : 00
-				},
+				}],
 				sunUp: false,
 				sunDown: false
 			},
 			offAction : {
 				useUnit : false,
 				unit : [],
-				useTime : false,
-				time : {
-					hours : 00,
-					minutes : 00,
+				useTime : true,
+				time : [{
+					hours : 06,
+					minutes : 15,
 					seconds : 00
-				},
+				}],
 				sunUp: false,
 				sunDown: false
 			}
@@ -318,7 +302,7 @@ function homeInfo(){
 function eventEngine(){
 	var self = this;
 
-	self.pollRate = 5000; //ms
+	self.pollRate = 60000; //ms
 }
 
 function piHomeAutoConfig () {
