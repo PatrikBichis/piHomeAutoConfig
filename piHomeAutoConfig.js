@@ -207,8 +207,8 @@ function controll(){
 				unit : [],
 				useTime : true,
 				time : [{
-					hours : 06,
-					minutes : 15,
+					hours : 08,
+					minutes : 00,
 					seconds : 00
 				}],
 				sunUp: false,
