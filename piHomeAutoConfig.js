@@ -169,7 +169,7 @@ function controll(){
 			unitId : 9,
 			name : "Lampa i trappen",
 			currentValue : false,
-			dimmer : true,
+			dimmer : false,
 			currentDimValue : 255
 		},{
 			id : 10,
@@ -177,7 +177,7 @@ function controll(){
 			unitId : 10,
 			name : "Lampa i trappen",
 			currentValue : false,
-			dimmer : true,
+			dimmer : false,
 			currentDimValue : 255
 		},{
 			id : 11,
@@ -185,7 +185,7 @@ function controll(){
 			unitId : 11,
 			name : "Lampa i trappen",
 			currentValue : false,
-			dimmer : true,
+			dimmer : false,
 			currentDimValue : 255
 		}
 	];
