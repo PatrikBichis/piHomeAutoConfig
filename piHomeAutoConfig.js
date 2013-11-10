@@ -63,6 +63,27 @@ function tellstick(){
 			model : "selflearning-dimmer",
 			parameters : {house : "1", unit : "5"},
 			currentValue : false
+		},{	
+			id : 9,
+			name : "Lampa i trappen",
+			protocol : "arctech",
+			model : "selflearning-dimmer",
+			parameters : {house : "1", unit : "6"},
+			currentValue : false
+		},{	
+			id : 10,
+			name : "Lampa i trappen",
+			protocol : "arctech",
+			model : "selflearning-dimmer",
+			parameters : {house : "1", unit : "7"},
+			currentValue : false
+		},{	
+			id : 11,
+			name : "Lampa i trappen",
+			protocol : "arctech",
+			model : "selflearning-dimmer",
+			parameters : {house : "1", unit : "8"},
+			currentValue : false
 		}
 	];
 }
@@ -122,7 +143,7 @@ function controll(){
 			id : 6,
 			type : 1,
 			unitId : 6,
-			name : "Bordslampa i hallen",
+			name : "F"+unescape("%F6")+"nsterlampa i kontoret",
 			currentValue : false,
 			dimmer : false,
 			currentDimValue : 255
@@ -138,6 +159,30 @@ function controll(){
 			id : 8,
 			type : 1,
 			unitId : 8,
+			name : "Lampa i trappen",
+			currentValue : false,
+			dimmer : true,
+			currentDimValue : 255
+		},{
+			id : 9,
+			type : 1,
+			unitId : 9,
+			name : "Lampa i trappen",
+			currentValue : false,
+			dimmer : true,
+			currentDimValue : 255
+		},{
+			id : 10,
+			type : 1,
+			unitId : 10,
+			name : "Lampa i trappen",
+			currentValue : false,
+			dimmer : true,
+			currentDimValue : 255
+		},{
+			id : 11,
+			type : 1,
+			unitId : 11,
 			name : "Lampa i trappen",
 			currentValue : false,
 			dimmer : true,
@@ -168,8 +213,8 @@ function controll(){
 			}
 		},{ 
 			id : 2,
-			name : "Fönster lampor (Nere)",
-			units : [1, 3, 5],
+			name : "Fönster lampor (Uppe)",
+			units : [7],
 			onAction : {
 				useUnit : false,
 				unit : [],
@@ -187,7 +232,27 @@ function controll(){
 				sunDown: false
 			}
 		},{ 
-			id : 2,
+			id : 3,
+			name : "Fönster lampor (Nere)",
+			units : [1, 3, 5, 6],
+			onAction : {
+				useUnit : false,
+				unit : [],
+				useTime : false,
+				time : [],
+				sunUp: false,
+				sunDown: false
+			},
+			offAction : {
+				useUnit : false,
+				unit : [],
+				useTime : false,
+				time : [],
+				sunUp: false,
+				sunDown: false
+			}
+		},{ 
+			id : 4,
 			name : "Ute belysning",
 			units : [4 ],
 			onAction : {
