@@ -183,7 +183,7 @@ function controll(){
 			id : 11,
 			type : 1,
 			unitId : 11,
-			name : "F"+unescape("%F6")+"nsterlampa i Havannas rum",,
+			name : "F"+unescape("%F6")+"nsterlampa i Havannas rum",
 			currentValue : false,
 			dimmer : false,
 			currentDimValue : 255
