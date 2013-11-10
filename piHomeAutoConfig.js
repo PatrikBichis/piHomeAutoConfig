@@ -167,7 +167,7 @@ function controll(){
 			id : 9,
 			type : 1,
 			unitId : 9,
-			name : "Lampa i trappen",
+			name : "Lampa p"+unescape("%E5")+" bord vid soffa",
 			currentValue : false,
 			dimmer : false,
 			currentDimValue : 255
@@ -175,7 +175,7 @@ function controll(){
 			id : 10,
 			type : 1,
 			unitId : 10,
-			name : "Lampa i trappen",
+			name : "F"+unescape("%F6")+"nsterlampa i Manillas rum",
 			currentValue : false,
 			dimmer : false,
 			currentDimValue : 255
@@ -183,7 +183,7 @@ function controll(){
 			id : 11,
 			type : 1,
 			unitId : 11,
-			name : "Lampa i trappen",
+			name : "F"+unescape("%F6")+"nsterlampa i Havannas rum",,
 			currentValue : false,
 			dimmer : false,
 			currentDimValue : 255
@@ -194,7 +194,7 @@ function controll(){
 		{ 
 			id : 1,
 			name : "Alla",
-			units : [1, 2, 3, 4, 5, 6, 7, 8],
+			units : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
 			onAction : {
 				useUnit : false,
 				unit : [],
@@ -213,13 +213,13 @@ function controll(){
 			}
 		},{ 
 			id : 2,
-			name : "Fönster lampor (Uppe)",
-			units : [7],
+			name : "TV mys",
+			units : [1, 2, 3, 8, 9],
 			onAction : {
 				useUnit : false,
 				unit : [],
 				useTime : false,
-				time : [],
+				time :[],
 				sunUp: false,
 				sunDown: false
 			},
@@ -233,8 +233,8 @@ function controll(){
 			}
 		},{ 
 			id : 3,
-			name : "Fönster lampor (Nere)",
-			units : [1, 3, 5, 6],
+			name : "Fönster lampor (Uppe)",
+			units : [7, 9, 10],
 			onAction : {
 				useUnit : false,
 				unit : [],
@@ -253,6 +253,34 @@ function controll(){
 			}
 		},{ 
 			id : 4,
+			name : "Fönster lampor (Nere)",
+			units : [1, 3, 5, 6],
+			onAction : {
+				useUnit : false,
+				unit : [],
+				useTime : false,
+				time : [{
+					hours : 05,
+					minutes : 30,
+					seconds : 00
+				}],
+				sunUp: false,
+				sunDown: false
+			},
+			offAction : {
+				useUnit : false,
+				unit : [],
+				useTime : false,
+				time : [{
+					hours : 08,
+					minutes : 00,
+					seconds : 00
+				}],
+				sunUp: false,
+				sunDown: false
+			}
+		},{ 
+			id : 5,
 			name : "Ute belysning",
 			units : [4 ],
 			onAction : {
